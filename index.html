@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destiny App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="destiny-app">
+    <div v-for="card in cards">
+        <div class="card" v-bind:class="card.color" v-bind:style='{backgroundImage: "url(" + card.img + ")"}'>
+        <!--img goes here-->
+
+
+        <!--img goes here-->
+             <div class="health">{{card.health}}</div>
+            <div class="rarity" v-bind:class="card.rarity ? 'rare': 'legendary'">{{card.setNumber}}</div>
+             <div class="name">{{card.name}}</div>
+             <div class="affl" v-bind:class="card.affl">{{card.affl}}</div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<!--<div id="app">-->
+<!--    {{title}}-->
+<!--    <div v-for="tweet in tweets" v-bind:class="{cool: tweet.cool}" v-bind:style="{color:tweet.color}">-->
+<!--        <h1>{{tweet.name}}</h1>-->
+<!--        <h3>{{tweet.color}}</h3>-->
+
+
+
+<!--        <p>more text</p>-->
+
+<!--    </div>-->
+<!--</div>-->
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
